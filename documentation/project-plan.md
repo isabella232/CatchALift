@@ -8,16 +8,16 @@ To create a system where CAl Veterans can input their weight, height, goal wiegh
 
 # Who #
 
-Jackson - principal front end architect
-Austin - principal algorithm designer
-Richie - principal data analyst
+* Jackson - principal front end architect
+* Austin - principal algorithm designer
+* Richie - principal data analyst
 
 # How #
-Agile
-1 week sprints
-Slack for communication
-Trello for User Story
-github for source & documentation
+* Agile
+* 1 week sprints
+* Slack for communication
+* Trello for User Story
+* github for source & documentation
 
 # When #
 5/13 Presentation
