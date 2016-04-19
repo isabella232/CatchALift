@@ -8,8 +8,10 @@
 	<form class="form-inline" action="{% url 'login:login' %}" method="post">
 		{% csrf_token %}
 		<div class="form-group">
-			<label for="UserID">UserID</label>
+			<label for="UserID">Username</label>
 			<input type="text" class="form-control" name="username">
+			<label for="UserID">Password</label>
+			<input type="password" class="form-control" name="password">
 			<input type="submit" value="Login">
 		</div>
 	</form>
