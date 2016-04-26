@@ -1,0 +1,19 @@
+<!-- included in admin/admin.html -->
+<div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <h3>Welcome CatchALift Admin!</h3>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+        <ul class="nav nav-pills nav-justified">
+          <li role="presentation" class="active"><a href="#}">Home</a></li>
+          <li role="presentation"><a href="#">CALadmin</a></li>
+          <li role="presentation"><a href="#">Coach</a></li>
+          <li role="presentation"><a href="#">Users</a></li>
+          <li><a href="{% url 'home:sign_out' %}">Logout</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,21 +1,6 @@
 {% extends "base.html" %}
 
 {% block css %}
-<style>
-	.signature
-	{
-		font-size: 10px;
-		line-height: 13px;
-		color: rgb(193,193,193);
-		text-align: right;
-		float: right;
-	}
-
-	.footer
-	{
-		padding-right: 20px;
-	}
-</style>
 {% endblock %}
 
 {% block content %}
@@ -27,11 +12,8 @@
 	{% elif group == "Coach" %}
 		{% include 'home/coach/main.html' %}
 	{% else %}
-		<p>This account is not registered into a group...</p>
+		<p>This account is not registered into a group.</p>
 	{% endif %}
-	<hr>
-	<div class="footer col-md-offset-5">
-		<p class="signature">CAL Project &copy<br/>NCHS &bull; PayPal<br/>https://catchaliftfund.com/</p>
-	</div>
+
 </div>
 {% endblock content %}
