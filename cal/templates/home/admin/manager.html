@@ -1,0 +1,53 @@
+<div class="container">
+  <h3>Coach Accounts</h3>
+  <div class="container jumbotron spaced">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <td><b>Username</b></td>
+          <td><b>First Name</b></td>
+          <td><b>Last Name</b></td>
+          <td><b>Options</b></td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for coach in coach_list %}
+          <tr>
+            <td>{{ coach.get_username }}</td>
+            <td>{{ coach.first_name }}</td>
+            <td>{{ coach.last_name }}</td>
+            <td>Remove/Modify</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" href="#">Add a Coach Account</button>
+  </div>
+</div>
+
+<div class="container">
+  <h3>User Accounts</h3>
+  <div class="container jumbotron spaced">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <td><b>Username</b></td>
+          <td><b>First Name</b></td>
+          <td><b>Last Name</b></td>
+          <td><b>Options</b></td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in user_list %}
+          <tr>
+            <td>{{ user.get_username }}</td>
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>Remove/Modify</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" href="#">Add a Coach Account</button>
+  </div>
+</div>
