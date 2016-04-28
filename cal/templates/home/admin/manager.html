@@ -16,7 +16,7 @@
             <td>{{ coach.get_username }}</td>
             <td>{{ coach.first_name }}</td>
             <td>{{ coach.last_name }}</td>
-            <td>Remove/Modify</td>
+            <td><a href="{% url 'home:remove' coach.id %}">Remove</a>/Modify</td>
           </tr>
         {% endfor %}
       </tbody>
@@ -43,11 +43,11 @@
             <td>{{ user.get_username }}</td>
             <td>{{ user.first_name }}</td>
             <td>{{ user.last_name }}</td>
-            <td>Remove/Modify</td>
+            <td><a href="{% url 'home:remove' user.id %}">Remove</a>/Modify</td>
           </tr>
         {% endfor %}
       </tbody>
     </table>
-    <button type="button" class="btn btn-primary" href="#">Add a Coach Account</button>
+    <button type="button" class="btn btn-primary" href="#">Add a User Account</button>
   </div>
 </div>
