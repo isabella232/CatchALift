@@ -8,7 +8,7 @@
       </div>
     </nav>
     <div class="container-fluid">
-        <ul class="nav nav-pills nav-justified">
+        <ul class="nav nav-tabs nav-justified">
           <li role="presentation" {% if page == '/' %}class="active"{% endif %}><a href="{% url 'home:index' %}">Home</a></li>
           <li role="presentation" {% if page == '/manager' %}class="active"{% endif %}><a href="{% url 'home:manager' %}">Account Manager</a></li>
           <li><a href="{% url 'home:sign_out' %}">Logout</a></li>

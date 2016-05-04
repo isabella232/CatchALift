@@ -1,53 +1,54 @@
 <div class="container">
-  <h3>Coach Accounts</h3>
-  <div class="container jumbotron spaced">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <td><b>Username</b></td>
-          <td><b>First Name</b></td>
-          <td><b>Last Name</b></td>
-          <td><b>Options</b></td>
-        </tr>
-      </thead>
-      <tbody>
-        {% for coach in coach_list %}
+  <div class="spaced">
+    <button type="button" class="btn btn-success" onclick="location.href='{% url 'home:create' %}';">Add a New Account</button>
+    <h3>Coach Accounts</h3>
+    <div class="container spaced">
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <td>{{ coach.get_username }}</td>
-            <td>{{ coach.first_name }}</td>
-            <td>{{ coach.last_name }}</td>
-            <td><a href="{% url 'home:remove' coach.id %}">Remove</a>/Modify</td>
+            <td><b>Username</b></td>
+            <td><b>First Name</b></td>
+            <td><b>Last Name</b></td>
+            <td><b>Options</b></td>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <button type="button" class="btn btn-primary" href="#">Add a Coach Account</button>
+        </thead>
+        <tbody>
+          {% for coach in coach_list %}
+            <tr>
+              <td>{{ coach.get_username }}</td>
+              <td>{{ coach.first_name }}</td>
+              <td>{{ coach.last_name }}</td>
+              <td><a href="{% url 'home:remove' coach.id %}">Remove</a>/<a href="{% url 'home:modify' coach.id %}">Modify</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
 
-<div class="container">
-  <h3>User Accounts</h3>
-  <div class="container jumbotron spaced">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <td><b>Username</b></td>
-          <td><b>First Name</b></td>
-          <td><b>Last Name</b></td>
-          <td><b>Options</b></td>
-        </tr>
-      </thead>
-      <tbody>
-        {% for user in user_list %}
+  <div class="container">
+    <h3>User Accounts</h3>
+    <div class="container spaced">
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <td>{{ user.get_username }}</td>
-            <td>{{ user.first_name }}</td>
-            <td>{{ user.last_name }}</td>
-            <td><a href="{% url 'home:remove' user.id %}">Remove</a>/Modify</td>
+            <td><b>Username</b></td>
+            <td><b>First Name</b></td>
+            <td><b>Last Name</b></td>
+            <td><b>Options</b></td>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <button type="button" class="btn btn-primary" href="#">Add a User Account</button>
+        </thead>
+        <tbody>
+          {% for user in user_list %}
+            <tr>
+              <td>{{ user.get_username }}</td>
+              <td>{{ user.first_name }}</td>
+              <td>{{ user.last_name }}</td>
+              <td><a href="{% url 'home:remove' user.id %}">Remove</a>/<a href="{% url 'home:modify' user.id %}">Modify</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
