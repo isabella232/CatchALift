@@ -16,6 +16,11 @@ def landing(request):
 
     return render(request, 'home/index.html', context)
 
+def sign_out(request):
+    logout(request)
+    return redirect('login:login')
+
+#CALadmin views(navigating, mod/rem/make users)
 def remove(request, user_id):
     if not request.user.is_authenticated():
         return redirect('login:login')
@@ -78,7 +83,3 @@ def save_new(request):
     g.user_set.add(user)
     user.save()
     return redirect('home:manager')
-
-def sign_out(request):
-    logout(request)
-    return redirect('login:login')
