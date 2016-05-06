@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 
 def landing(request):
     if not request.user.is_authenticated():
@@ -29,6 +29,7 @@ def modify(request, user_id):
     context = dict()
     context['modify'] = True
     context['group'] = request.user.groups.all()[0].name
+    context['user_group'] = user.groups.all()[0].name
     context['page'] = request.path
     context['id'] = user_id
     context['username'] = user.username
@@ -43,6 +44,11 @@ def save(request, user_id):
     user.username = request.POST['username']
     user.first_name = request.POST['fname']
     user.last_name = request.POST['lname']
+    user.groups.clear()
+    g = Group.objects.get(name=request.POST['type'])
+    g.user_set.add(user)
+    if request.POST['password'] != '':
+        user.set_password(request.POST['password'])
     user.save()
     return redirect('home:manager')
 
@@ -66,7 +72,11 @@ def save_new(request):
         context['page'] = request.path
         context['error'] = 'This account already exists'
         return render(request, 'home/index.html', context)
-    User.objects.create(username=request.POST['username'], first_name=request.POST['fname'], last_name=request.POST['lname'])
+    user = User.objects.create(username=request.POST['username'], first_name=request.POST['fname'], last_name=request.POST['lname'])
+    user.set_password(request.POST['password'])
+    g = Group.objects.get(name=request.POST['type'])
+    g.user_set.add(user)
+    user.save()
     return redirect('home:manager')
 
 def sign_out(request):

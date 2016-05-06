@@ -1,20 +1,28 @@
 <div class="container">
-  <div class="jumbotron spaced">
+  <h2>Create an account</h2>
+  <div class="spaced">
     {% if modify %}
-      <form class="form" action="{% url 'home:save' id %}" method="post">
+      <form class="form" action="{% url 'home:save' id %}" autocomplete="off" method="post">
     {% elif create %}
-      <form class="form" action="{% url 'home:save_new' %}" method="post">
+      <form class="form" action="{% url 'home:save_new' %}" autocomplete="off" method="post">
     {% endif %}
         {% csrf_token %}
         <div class="form-group">
           <!-- include toggle button for account type-->
           <label>Username</label>
-          <input type="text" class="form-control" name="username" value={{ username }}>
+          <input type="text" class="form-control" required name="username" value="{{ username }}">
           <label>First Name</label>
-          <input type="text" class="form-control" name="fname" value={{ fname }}>
+          <input type="text" class="form-control" name="fname" value="{{ fname }}">
           <label>Last Name</label>
-          <input type="text" class="form-control" name="lname" value={{ lname }}>
-          <input type="submit" value="Save">
+          <input type="text" class="form-control" name="lname" value="{{ lname }}">
+          <label>Password</label>
+          <input type="password" class="form-control" name="password"  {% if modify %}placeholder="(unchanged)"{% elif create %}required{% endif %}>
+          <label>Account Type</label>
+          <select required multiple class="form-control" name="type">
+            <option value="User" {% if user_group == "User" %}selected="selected"{% endif %}>User</option>
+            <option value="Coach" {% if user_group == "Coach" %}selected="selected"{% endif %}>Coach</option>
+          </select>
+          <input type="submit" align="right" value="Save">
         </div>
       </form>
       <p>{{ error }}</p>
