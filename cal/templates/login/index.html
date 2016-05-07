@@ -4,24 +4,12 @@
 {% block css %}
 <style>
 	.background{
-		padding-top: 400px;
-		padding-bottom: 100px;
+		padding-bottom: 650px;
 		background:url({% static 'img/poster.jpg' %});
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
-	}
-
-	.form-group{
-		border-radius: 10px;
-		background-color: white;
-		background: rgb(255, 255, 255);
-		background: rgba(255, 255, 255, .5);
-		padding-top: 30px;
-		padding-left: 300px;
-		padding-right: 40px;
-		padding-bottom: 30px;
 	}
 
 	.invalid{
@@ -31,25 +19,20 @@
 {% endblock %}
 
 {% block content %}
-<div class="background">
 	<div class="container">
-		<div class="row">
-			<div class="form">
-				<div class="forms col-md-2 col-md-offset-6">
-					<form class="form-inline" action="{% url 'login:login' %}" method="post">
-						{% csrf_token %}
-						<div class="form-group">
-							<label>Username</label>
-							<input type="text" class="form-control" name="username">
-							<label>Password</label>
-							<input type="password" class="form-control" name="password">
-							<p class="invalid">{{ invalid }}</p>
-							<input type="submit" value="Login">
-						</div>
-					</form>
-				</div>
+		<a class="navbar-brand" href="{% url 'login:login' %}">CatchALift</a>
+		<form class="navbar-form navbar-right" action="{% url 'login:login' %}" method="post">
+			{% csrf_token %}
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" class="form-control" name="username">
+				<label>Password</label>
+				<input type="password" class="form-control" name="password"></a>
+				<button type="submit" class="btn btn-primary">Login</button>
+				<p class="invalid">{{ invalid }}</p>
 			</div>
-		</div>
+		</form>
 	</div>
-</div>
+	<div class="background">
+	</div>
 {% endblock content %}

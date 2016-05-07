@@ -1,10 +1,9 @@
 {% load static %}
-
-
-<ul class="nav nav-tabs">
+<div class="container">
   <a class="navbar-brand" href="{% url 'home:index' %}">CatchALift</a>
-  <li><a href="#">Workout Plans</a></li>
-  <li><a href="#">Messages</a></li>
-  <li><a href="{% url 'home:sign_out' %}">Logout</a></li>
-  <p class="navbar-text">Welcome</p>
-</ul>
+  <ul class="nav nav-tabs navbar-right">
+    <li role="presentation"><a href="#">Workout Plans</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+    <li role="presentation"><a href="{% url 'home:sign_out' %}">Logout</a></li>
+  </ul>
+</div>
