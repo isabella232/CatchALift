@@ -1,0 +1,10 @@
+{% load static %}
+
+
+<ul class="nav nav-tabs">
+  <a class="navbar-brand" href="{% url 'home:index' %}">CatchALift</a>
+  <li><a href="#">Workout Plans</a></li>
+  <li><a href="#">Messages</a></li>
+  <li><a href="{% url 'home:sign_out' %}">Logout</a></li>
+  <p class="navbar-text">Welcome</p>
+</ul>
