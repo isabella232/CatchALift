@@ -1,0 +1,9 @@
+<!-- rendered through index.html -->
+{% include 'admin/menu.html' %}
+{% if page == '/manager' %}
+  {% include 'admin/manager.html' %}
+{% elif modify or create %}
+    {% include 'admin/modify.html' %}
+{% else %}
+  {% include 'admin/home.html' %}
+{% endif %}

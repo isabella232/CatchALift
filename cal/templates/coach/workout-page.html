@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Modify a Workout Plan</h2>
+  <div class="spaced">
+      <form class="form" action="{% url 'home:save_new' %}" autocomplete="off" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <!-- include toggle button for account type-->
+          <label>Title</label>
+          <input type="text" class="form-control" required name="username" value="{{ title }}">
+          <label>Description</label>
+          <input type="text" class="form-control" name="fname" value="{{ description }}">
+          <label>Notes</label>
+          <input type="text" class="form-control" name="lname" value="{{ notes }}">
+
+          <input type="submit" align="right" value="Save">
+        </div>
+      </form>
+      {% for exercise in exercises %}
+        {{ exercise }}
+      {% endfor %}
+  </div>
+</div>

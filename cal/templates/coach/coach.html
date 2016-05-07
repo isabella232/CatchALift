@@ -1,0 +1,14 @@
+{% include 'coach/navbar.html' %}
+<div class="container">
+  {% if page == '/coach/workouts' %}
+    {% include 'coach/workouts.html' %}
+  {% elif wmodify or wcreate %}
+    {% include 'coach/workout-page.html' %}
+  {% elif emodify or ecreate %}
+    {% include 'coach/exercise-page.html' %}
+  {% elif page == '/coach/messages' %}
+    {% include 'coach/messages.html' %}
+  {% else %}
+    {% include 'coach/main.html' %}
+  {% endif %}
+</div>

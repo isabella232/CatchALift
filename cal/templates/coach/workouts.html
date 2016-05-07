@@ -1,0 +1,44 @@
+{% load static %}
+{% block css %}
+<style>
+  .workout
+  {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    height: 200px;
+    width: 200px;
+    text-align:center;
+  }
+
+  .dashboard
+  {
+    background-color: #F5F5F5;
+    padding: 20px;
+  }
+</style>
+{% endblock %}
+<div class="container spaced">
+  <button type="button" class="btn btn-success click-element" onclick="location.href='{% url 'coach:wcreate' %}';">Create a New Workout Plan</button>
+  <h2>Workout Plans</h2>
+  <div class="dashboard">
+    {% for workout in workouts %}
+      <div class="workout click-element" style="background-color:
+        {% if forloop.counter|divisibleby:4 %}
+          #E87352
+        {% elif forloop.counter|divisibleby:3 %}
+          #EECA5A
+        {% elif forloop.counter|divisibleby:2 %}
+          #66B5D6
+        {% else %}
+          #5FCE9B
+        {% endif %}
+        ;" onclick="location.href='{% url 'coach:wmodify' workout.id %}';">
+        <img src="{% static 'img/workout_ico.png' %}" width="100px" height= "100px">
+        <h4>{{ workout.title }}</h4>
+      </div>
+    {% endfor %}
+  </div>
+</div>

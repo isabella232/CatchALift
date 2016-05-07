@@ -6,17 +6,21 @@
     {
         margin-top:20px;
     }
+
+    .click-element{
+      cursor: pointer;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
 <div>
 	{% if group == "User" %}
-		{% include 'home/user/main.html' %}
+		{% include 'user/main.html' %}
 	{% elif group == "CALadmin" %}
-		{% include 'home/admin/admin.html' %}
+		{% include 'admin/admin.html' %}
 	{% elif group == "Coach" %}
-		{% include 'home/coach/main.html' %}
+		{% include 'coach/coach.html' %}
 	{% else %}
 		<p>This account is not registered into a group.</p>
 	{% endif %}
