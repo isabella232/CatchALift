@@ -1,0 +1,14 @@
+[
+  {
+    "title":"Workout A",
+    "description":"This is the first workout",
+    "notes":"Include links in the notes section as well as exercise patterns",
+    "exercises":"Exercise 1,Exercise 2,Exercise 3"
+  },
+  {
+    "title":"Workout B",
+    "description":"This is the second workout",
+    "notes":"Include links in the notes section as well as exercise patterns",
+    "exercises":"Exercise 2,Exercise 4,Exercise 5"
+  }
+]

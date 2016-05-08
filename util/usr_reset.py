@@ -10,7 +10,7 @@ user_json = open('usr.json', 'r')
 user_list = json.load(user_json)
 
 for user in user_list:
-    if len(User.objects.filter(username=user['username'])) == 0:
+    if len(User.objects.filter(z=user['username'])) == 0:
         new_user = User.objects.create_user(username=user['username'],password=user['password'],first_name=user['fname'], last_name=user['lname'])
         Group.objects.get(name=user['group']).user_set.add(new_user)
         print('Added ' + user['username'])
