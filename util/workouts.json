@@ -10,5 +10,35 @@
     "description":"This is the second workout",
     "notes":"Include links in the notes section as well as exercise patterns",
     "exercises":"Exercise 2,Exercise 4,Exercise 5"
+  },
+  {
+    "title":"Workout C",
+    "description":"This is the second workout",
+    "notes":"Include links in the notes section as well as exercise patterns",
+    "exercises":"Exercise 6,Exercise 4,Exercise 1"
+  },
+  {
+    "title":"Workout D",
+    "description":"This is the second workout",
+    "notes":"Include links in the notes section as well as exercise patterns",
+    "exercises":"Exercise 9,Exercise 10,Exercise 5"
+  },
+  {
+    "title":"Workout E",
+    "description":"This is the second workout",
+    "notes":"Include links in the notes section as well as exercise patterns",
+    "exercises":"Exercise 1,Exercise 4,Exercise 3,Exercise 9,Exercise 10"
+  },
+  {
+    "title":"Workout F",
+    "description":"This is the second workout",
+    "notes":"Include links in the notes section as well as exercise patterns",
+    "exercises":"Exercise 9,Exercise 6,Exercise 5"
+  },
+  {
+    "title":"Workout G",
+    "description":"This is the second workout",
+    "notes":"Include links in the notes section as well as exercise patterns",
+    "exercises":"Exercise 10,Exercise 9,Exercise 5"
   }
 ]

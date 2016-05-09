@@ -2,6 +2,8 @@
 <div class="container">
   {% if page == '/coach/workouts' %}
     {% include 'coach/workouts.html' %}
+  {% elif page == '/coach/exercises' %}
+    {% include 'coach/exercises.html' %}
   {% elif wmodify or wcreate %}
     {% include 'coach/workout-page.html' %}
   {% elif emodify or ecreate %}

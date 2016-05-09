@@ -1,30 +1,28 @@
 <div class="container">
-  <h2>Modify a Workout Plan</h2>
   <div class="spaced">
-    <form class="form" action="{% url 'home:save_new' %}" autocomplete="off" method="post">
+    {% if wmodify %}
+    <h2>Modify a Workout Plan</h2>
+    <form class="form" action="{% url 'coach:wsave' id %}" autocomplete="off" method="post">
+    {% elif wcreate %}
+    <h2>Create a Workout Plan</h2>
+    <form class="form" action="{% url 'coach:wsave_new' %}" autocomplete="off" method="post">
+    {% endif %}
       {% csrf_token %}
-      <div class="form-group">
-        <!-- include toggle button for account type-->
-        <label>Title</label>
-        <input type="text" class="form-control" required name="username" value="{{ title }}">
-        <label>Description</label>
-        <input type="text" class="form-control" name="fname" value="{{ description }}">
-        <label>Notes</label>
-        <input type="text" class="form-control" name="lname" value="{{ notes }}">
-        <label>Exercises</label>
-        <select required multiple class="form-control" name="type">
-          {% for exercise in exercises %}
-            <option value="{{ exercise.name }}">{{ exercise }}</option>
-          {% endfor %}
-        </select>
-
-        <select class="form-control">
-          {% for exercise in exer_inverse %}
-            <option value="{{ exercise.name }}">{{ exercise }}</option>
-          {% endfor %}
-        </select>
-        <input type="submit" align="right" value="Save">
-      </div>
+      <label>Title</label>
+      <input type="text" class="form-control" required name="title" value="{{ title }}" maxlength="10">
+      <label>Description</label>
+      <input type="text" class="form-control" name="description" value="{{ description }}" maxlength="100">
+      <label>Notes</label>
+      <input type="text" class="form-control" name="notes" value="{{ notes }}" maxlength="300">
+      <label>Exercises</label>
+      <p>Ctrl+Click to select multiple Exercises</p>
+      <select required multiple class="form-control" name="exercises">
+        {% for exercise in all_exercises %}
+          <option value="{{ exercise.name }}" {% if exercise in workout_exercises %}selected="selected"{% endif %} name='{{ forloop.counter }}'>{{ exercise }}</option>
+        {% endfor %}
+      </select>
+      <input type="submit" align="right" value="Save">
     </form>
+    <p>{{ error }}</p>
   </div>
 </div>

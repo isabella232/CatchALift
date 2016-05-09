@@ -1,10 +1,17 @@
 from django.conf.urls import url
-from . import views
+from .views import workouts, exercises
 
 urlpatterns = [
-    url(r'^workouts$', views.workouts, name='workouts'),
-    url(r'^create$', views.wcreate, name='wcreate'),
-    url(r'^m(?P<workout_id>\d+)$', views.wmodify, name='wmodify'),
-    url(r'^r(?P<workout_id>\d+)$', views.wremove, name='wremove'),
-    url(r'^save$', views.wsave, name='wsave'),
+    url(r'^workouts$', workouts.workouts, name='workouts'),
+    url(r'^wcreate$', workouts.create, name='wcreate'),
+    url(r'^mw(?P<workout_id>\d+)$', workouts.modify, name='wmodify'),
+    url(r'^rw(?P<workout_id>\d+)$', workouts.remove, name='wremove'),
+    url(r'^sw(?P<workout_id>\d+)$', workouts.save, name='wsave'),
+    url(r'^wsave_new$', workouts.save_new, name='wsave_new'),
+    url(r'^exercises$', exercises.exercises, name='exercises'),
+    url(r'^ecreate$', exercises.create, name='ecreate'),
+    url(r'^me(?P<exercise_id>\d+)$', exercises.modify, name='emodify'),
+    url(r'^re(?P<exercise_id>\d+)$', exercises.remove, name='eremove'),
+    url(r'^se(?P<exercise_id>\d+)$', exercises.save, name='esave'),
+    url(r'^esave_new$', exercises.save_new, name='esave_new'),
 ]

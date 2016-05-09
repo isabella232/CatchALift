@@ -1,9 +1,10 @@
 <div class="container">
-  <h2>Account Settings</h2>
   <div class="spaced">
     {% if modify %}
+      <h2>Modify An Account</h2>
       <form class="form" action="{% url 'home:save' id %}" autocomplete="off" method="post">
     {% elif create %}
+      <h2>Create An Account</h2>
       <form class="form" action="{% url 'home:save_new' %}" autocomplete="off" method="post">
     {% endif %}
         {% csrf_token %}
