@@ -8,16 +8,16 @@
 {% endblock %}
 <div class="spaced">
   <h3>Exercises</h3>
-  <button type="button" class="btn btn-success click-element" onclick="location.href='{% url 'coach:ecreate' %}';">Create a New Exercise Plan</button>
+  <button type="button" class="btn btn-success click-element" onclick="location.href='{% url 'plans:ecreate' %}';">Create a New Exercise</button>
   <ul class="list-group spaced">
     {% for exercise in exercises %}
-      <a href="{% url 'coach:emodify' exercise.id %}" class="list-group-item spaced">
+      <a href="{% url 'plans:emodify' exercise.id %}" class="list-group-item spaced">
         <h4 class="list-group-item-heading">{{ exercise.name }}</h4>
         <p class="list-group-item-text">Sets: {% if exercise.sets %}{{exercise.sets}}{% else %}None{% endif %}</p>
         <p class="list-group-item-text">Reps: {{ exercise.reps }}</p>
         <p class="list-group-item-text">Notes: {{ exercise.notes }}</p>
       </a>
-      <a href="{% url 'coach:eremove' exercise.id %}"><h4 class="text-right tag-remove"><span class="label label-danger">Remove {{ exercise.name }}</span></h4></a>
+      <a href="{% url 'plans:eremove' exercise.id %}"><h4 class="tag-remove"><span class="label label-danger">Remove {{ exercise.name }}</span></h4></a>
     {% endfor %}
   </ul>
 </div>

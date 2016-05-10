@@ -2,10 +2,10 @@
   <div class="spaced">
     {% if emodify %}
     <h2>Modify an Exercise</h2>
-    <form class="form" id="exercise-form" action="{% url 'coach:esave' id %}" autocomplete="off" method="post">
+    <form class="form" id="exercise-form" action="{% url 'plans:esave' id %}" autocomplete="off" method="post">
     {% elif ecreate %}
     <h2>Create an Exercise</h2>
-    <form class="form" id="exercise-form" action="{% url 'coach:esave_new' %}" autocomplete="off" method="post">
+    <form class="form" id="exercise-form" action="{% url 'plans:esave_new' %}" autocomplete="off" method="post">
     {% endif %}
       {% csrf_token %}
       <label>Name</label>

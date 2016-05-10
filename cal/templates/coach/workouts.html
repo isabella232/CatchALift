@@ -5,14 +5,21 @@
   {
     position: absolute;
     margin-left: 27px;
-    margin-top: 15px;
+    margin-top: 33px;
+  }
+  .tag-label
+  {
+    position: absolute;
+    margin-left: -98px;
+    margin-top: -175px;
   }
   .workout
   {
     display: inline-block;
     margin-right: 10px;
     margin-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 33px;
+    margin-top: 10px;
     padding-top: 20px;
     height: 195px;
     width: 195px;
@@ -27,7 +34,7 @@
 </style>
 {% endblock %}
 <div class="container spaced">
-  <button type="button" class="btn btn-success click-element" onclick="location.href='{% url 'coach:wcreate' %}';">Create a New Workout Plan</button>
+  <button type="button" class="btn btn-success click-element" onclick="location.href='{% url 'plans:wcreate' %}';">Create a New Workout Plan</button>
   <h2>Workout Plans</h2>
   <p>Click on the boxes to modify a Workout Plan</p>
   <div class="dashboard">
@@ -42,10 +49,10 @@
         {% else %}
           #5FCE9B
         {% endif %}
-        ;" onclick="location.href='{% url 'coach:wmodify' workout.id %}';">
+        ;" onclick="location.href='{% url 'plans:wmodify' workout.id %}';">
         <img src="{% static 'img/workout_ico.png' %}" width="100px" height= "100px">
         <h4>{{ workout.title }}</h4>
-        <a href="{% url 'coach:wremove' workout.id %}"><h4><span class="label label-danger tag-remove">Remove</span></h4></a>
+        <a href="{% url 'plans:wremove' workout.id %}"><h4><span class="label label-danger tag-remove">Remove</span></h4></a>
       </div>
     {% endfor %}
   </div>

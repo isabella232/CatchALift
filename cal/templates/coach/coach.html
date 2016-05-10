@@ -1,14 +1,14 @@
 {% include 'coach/navbar.html' %}
 <div class="container">
-  {% if page == '/coach/workouts' %}
+  {% if page == '/plans/workouts' %}
     {% include 'coach/workouts.html' %}
-  {% elif page == '/coach/exercises' %}
+  {% elif page == '/plans/exercises' %}
     {% include 'coach/exercises.html' %}
   {% elif wmodify or wcreate %}
     {% include 'coach/workout-page.html' %}
   {% elif emodify or ecreate %}
     {% include 'coach/exercise-page.html' %}
-  {% elif page == '/coach/messages' %}
+  {% elif page == '/plans/messages' %}
     {% include 'coach/messages.html' %}
   {% else %}
     {% include 'coach/main.html' %}

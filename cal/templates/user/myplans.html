@@ -1,0 +1,11 @@
+<div class="container spaced">
+  <h2>My Plans</h2>
+  <div class="container">
+    <ul class="list-group spaced">
+      <h4>Your subscribed workouts:</h4>
+      {% for workout in my_workouts %}
+      <h4><li class="list-group-item">{{ workout.title }}: {{ workout.description }}<a href="{% url 'plans:unsubscribe' workout.id %}"><span class="label label-danger pull-right">Unsubscribe</span></a></h4></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

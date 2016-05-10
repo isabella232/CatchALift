@@ -38,7 +38,7 @@ def modify(request, workout_id):
 @coach_required
 def remove(request, workout_id):
     Workout.objects.get(id=workout_id).delete()
-    return redirect('coach:workouts')
+    return redirect('plans:workouts')
 
 @login_required
 @coach_required
@@ -51,7 +51,7 @@ def save(request, workout_id):
     for exercise in request.POST.getlist('exercises'):
         workout.exercise.add(Exercise.objects.get(name=exercise))
     workout.save()
-    return redirect('coach:workouts')
+    return redirect('plans:workouts')
 
 @login_required
 @coach_required
@@ -64,4 +64,4 @@ def save_new(request):
     workout = Workout.objects.create(title=request.POST['title'],description=request.POST['description'],notes=request.POST['notes'])
     for exercise in request.POST.getlist('exercises'):
         workout.exercise.add(Exercise.objects.get(name=exercise))
-    return redirect('coach:workouts')
+    return redirect('plans:workouts')

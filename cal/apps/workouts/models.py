@@ -1,4 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
+
+DEFAULT_ID = 1
 
 class Exercise(models.Model):
     name = models.CharField(max_length=100, default='', unique=True) #Name of Exercise
@@ -15,7 +18,8 @@ class Workout(models.Model):
     title = models.CharField(max_length=10, default='', unique=True) #Title of Workout
     description = models.CharField(max_length=100, default='') #General purpose of workout
     notes = models.TextField(max_length=300, default='') #Patterns of exercises, Additional references
-    exercise = models.ManyToManyField(Exercise)
+    exercise = models.ManyToManyField(Exercise, default=DEFAULT_ID) #Exercise elements that makes this workout
+    user = models.ManyToManyField(User, default=DEFAULT_ID) #Users who subscribe to this workout plan
     def __unicode__(self):
         return self.title
 

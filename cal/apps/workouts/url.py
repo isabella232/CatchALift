@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import workouts, exercises
+from .views import workouts, exercises, search
 
 urlpatterns = [
     url(r'^workouts$', workouts.workouts, name='workouts'),
@@ -14,4 +14,10 @@ urlpatterns = [
     url(r'^re(?P<exercise_id>\d+)$', exercises.remove, name='eremove'),
     url(r'^se(?P<exercise_id>\d+)$', exercises.save, name='esave'),
     url(r'^esave_new$', exercises.save_new, name='esave_new'),
+    #User side
+    url(r'^search$', search.search, name='search'),
+    url(r'^search(?P<workout_id>\d+)$', search.results, name='results'),
+    url(r'^subscribe(?P<workout_id>\d+)$', search.subscribe, name='subscribe'),
+    url(r'^unsubscribe(?P<workout_id>\d+)$', search.unsubscribe, name='unsubscribe'),
+    url(r'^myplans$', search.myplans, name='myplans'),
 ]

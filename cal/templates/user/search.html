@@ -1,0 +1,27 @@
+<div class="spaced">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><h3>Search for a Workout Plan</h3></th>
+        <th></th>
+        <th>
+          <form class="form-search pull-right" method="post" action="{% url 'plans:search' %}">
+            {% csrf_token %}
+            <input type="text" class="input-medium search-query" name="search" placeholder="Search" value="">
+            <button type="submit" class="add-on"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          </form>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for workout in workouts %}
+        <tr>
+          <td><a href="{% url 'plans:results' workout.id %}">{{ workout.title }}</a></td>
+          <td>{{ workout.description }}</td>
+          <td>{{ workout.notes }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>

@@ -2,10 +2,10 @@
   <div class="spaced">
     {% if wmodify %}
     <h2>Modify a Workout Plan</h2>
-    <form class="form" action="{% url 'coach:wsave' id %}" autocomplete="off" method="post">
+    <form class="form" action="{% url 'plans:wsave' id %}" autocomplete="off" method="post">
     {% elif wcreate %}
     <h2>Create a Workout Plan</h2>
-    <form class="form" action="{% url 'coach:wsave_new' %}" autocomplete="off" method="post">
+    <form class="form" action="{% url 'plans:wsave_new' %}" autocomplete="off" method="post">
     {% endif %}
       {% csrf_token %}
       <label>Title</label>

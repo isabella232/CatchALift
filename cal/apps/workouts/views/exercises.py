@@ -35,7 +35,7 @@ def modify(request, exercise_id):
 @coach_required
 def remove(request, exercise_id):
     Exercise.objects.get(id=exercise_id).delete()
-    return redirect('coach:exercises')
+    return redirect('plans:exercises')
 
 @login_required
 @coach_required
@@ -46,7 +46,7 @@ def save(request, exercise_id):
     exercise.sets = request.POST['sets']
     exercise.notes = request.POST['notes']
     exercise.save()
-    return redirect('coach:exercises')
+    return redirect('plans:exercises')
 
 @login_required
 @coach_required
@@ -57,4 +57,4 @@ def save_new(request):
         context['error'] = 'This exercise already exists'
         return render(request, 'index.html', context)
     Exercise.objects.create(name=request.POST['name'], reps=request.POST['reps'], sets=request.POST['sets'], notes=request.POST['notes'])
-    return redirect('coach:exercises')
+    return redirect('plans:exercises')
