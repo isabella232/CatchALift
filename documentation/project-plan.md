@@ -4,7 +4,7 @@
 
 # What #
 
-To create a system where CAl Veterans can input their weight, height, goal wieght, weekly budget, physical obstacles and dietary restrictions and are given a fitness and nutrition program to help jumpstart their fitness goals.
+Create a system to optimize communication between fitness trainers and veterans as well as accessibility to workout plans.
 
 # Who #
 

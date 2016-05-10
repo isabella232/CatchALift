@@ -3,7 +3,7 @@
 All passwords are 'password'(without quotations)
 
 ###DjangoStaff
-* jackson 
+* admin (password:'admin')
 
 ###CALadmins
 * lynn1
@@ -15,3 +15,4 @@ All passwords are 'password'(without quotations)
 ###Users
 * richie
 * austin
+* jackson

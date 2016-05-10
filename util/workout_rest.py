@@ -12,7 +12,7 @@ e_list = json.load(e_json)
 
 for e in e_list:
     if len(Exercise.objects.filter(name=e['name'])) == 0:
-        new_exercse = Exercise.objects.create(name=e['name'], sets=e['sets'], reps=e['reps'], notes=e['notes'])
+        Exercise.objects.create(name=e['name'], sets=e['sets'], reps=e['reps'], notes=e['notes'])
         print('Added ' + e['name'])
 
 for w in w_list:
