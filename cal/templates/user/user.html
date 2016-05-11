@@ -8,6 +8,10 @@
   {% include 'user/search.html' %}
 {% elif page == '/plans/myplans' %}
   {% include 'user/myplans.html' %}
+{% elif page == '/messaging/u' %}
+  {% include 'user/conversations.html' %}
+{% elif messaging %}
+  {% include 'user/conversation.html' %}
 {% elif view_workout %}
   {% include 'user/view-workout.html' %}
 {% else %}

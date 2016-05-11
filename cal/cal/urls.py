@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^', include('apps.home.url', namespace='home')),
     url(r'^login/', include('apps.login.url', namespace='login')),
     url(r'^plans/', include('apps.workouts.url', namespace='plans')),
+    url(r'^messaging/', include('apps.messaging.url', namespace='msg')),
 ]

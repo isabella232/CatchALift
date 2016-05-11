@@ -1,0 +1,38 @@
+<meta http-equiv="refresh" content="10" />
+{% block css %}
+<style>
+  .name{
+    color: #089DEE;
+  }
+  textarea{
+    resize: none;
+  }
+</style>
+{% endblock %}
+
+<div class="container">
+  <div class="page-header">
+    <h1>{{ coach }}</h1>
+  </div>
+  <form class="form" id="exercise-form" action="{% url 'msg:usend' coach_id %}" autocomplete="off" method="post">
+    {% csrf_token %}
+    <label>Write a Message:</label>
+    <input type="submit" class="pull-right" value="Send">
+    <textarea class="form-control" name="message" maxlength="500" form="exercise-form"></textarea>
+  </form>
+  <ul class="list-group spaced">
+  {% for message in messages %}
+  <div class="list-group-item">
+    {% if message.msg_from == user %}
+      <h2 class="list-group-item-heading text-right name">{{ message.msg_from }}</h2>
+      <h4 class="list-group-item-text text-right">{{ message.content }}</h4>
+      <p class="list-group-item-text text-right">{{ message.date_time }}</p>
+    {% else %}
+      <h2 class="list-group-item-heading name">{{ message.msg_from }}</h2>
+      <h4 class="list-group-item-text">{{ message.content }}</h4>
+      <p class="list-group-item-text">{{ message.date_time }}</p>
+    {% endif %}
+  </div>
+  {% endfor %}
+  </ul>
+</div>

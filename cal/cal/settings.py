@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.workouts',
+    'apps.messaging',
 )
 
 MIDDLEWARE_CLASSES = (

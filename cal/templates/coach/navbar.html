@@ -4,7 +4,7 @@
   <ul class="nav nav-tabs navbar-right">
     <li role="presentation" {% if page == '/plans/workouts' %}class="active"{% endif %}><a href="{% url 'plans:workouts' %}">Workouts</a></li>
     <li role="presentation" {% if page == '/plans/exercises' %}class="active"{% endif %}><a href="{% url 'plans:exercises' %}">Exercises</a></li>
-    <li role="presentation" {% if page == '/plans/message' %}class="active"{% endif %}><a href="#">Messages</a></li>
+    <li role="presentation" {% if page == '/messaging/' %}class="active"{% endif %}><a href="{% url 'msg:cconvs' %}">Messages</a></li>
     <li role="presentation"><a href="{% url 'home:sign_out' %}">Logout</a></li>
   </ul>
 </div>
