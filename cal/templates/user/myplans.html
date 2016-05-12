@@ -4,7 +4,17 @@
     <ul class="list-group spaced">
       <h4>Your subscribed workouts:</h4>
       {% for workout in my_workouts %}
-      <h4><li class="list-group-item">{{ workout.title }}: {{ workout.description }}<a href="{% url 'plans:unsubscribe' workout.id %}"><span class="label label-danger pull-right">Unsubscribe</span></a></h4></li>
+        <li class="list-group-item">
+          <a href="{% url 'plans:results' workout.id %}">
+            <h4>{{ workout.title }}</h4>
+          </a>
+          <p>{{ workout.description }}</p>
+          <h4>
+            <a href="{% url 'plans:unsubscribe' workout.id %}">
+              <span class="label label-danger pull-right">Unsubscribe</span>
+            </a>
+          </h4>
+        </li>
       {% endfor %}
     </ul>
   </div>

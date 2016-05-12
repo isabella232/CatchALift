@@ -3,13 +3,21 @@
 
 {% block css %}
 <style>
+	label{
+		color:white;
+	}
+
 	.background{
-		padding-bottom: 650px;
+		padding-bottom: 700px;
 		background:url({% static 'img/poster.jpg' %});
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+	}
+
+	.header{
+		margin-top: 0px;
 	}
 
 	.invalid{
@@ -20,18 +28,7 @@
 
 {% block content %}
 	<div class="container">
-		<a class="navbar-brand" href="{% url 'login:login' %}">CatchALift</a>
-		<form class="navbar-form navbar-right" action="{% url 'login:login' %}" method="post">
-			{% csrf_token %}
-			<div class="form-group">
-				<label>Username</label>
-				<input type="text" class="form-control" name="username">
-				<label>Password</label>
-				<input type="password" class="form-control" name="password"></a>
-				<button type="submit" class="btn btn-primary">Login</button>
-				<p class="invalid">{{ invalid }}</p>
-			</div>
-		</form>
+		{% include 'login/navbar.html' %}
 	</div>
 	<div class="background">
 	</div>

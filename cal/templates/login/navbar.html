@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'login:login' %}">Catch A Lift</a>
+    </div>
+    <div style="height: 1px;" aria-expanded="false" id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right" action="{% url 'login:login' %}" method="post">
+      {% csrf_token %}
+        <label>Username</label>
+        <input type="text" class="form-control" name="username">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password"></a>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <p class="invalid">{{ invalid }}</p>
+      </form>
+    </div>
+  </div>
+</nav>
+
+{% block js %}
+  <script>
+    window.jQuery || document.write('<script src="https://getbootstrap.com/assets/js/vendor/jquery.min.js"><\/script>')
+  </script>
+{% endblock %}

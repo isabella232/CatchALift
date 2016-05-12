@@ -1,3 +1,11 @@
+{% block css %}
+<style>
+  textarea{
+    resize: none;
+  }
+</style>
+{% endblock %}
+
 <div class="container">
   <div class="spaced">
     {% if emodify %}
@@ -15,7 +23,7 @@
       <label>Reps</label>
       <input type="number" class="form-control" name="reps" value="{{ reps }}">
       <label>Notes</label>
-      <textarea class="form-control" name="notes" value="{{ notes }}" maxlength="500" form="exercise-form"></textarea>
+      <textarea class="form-control" name="notes" maxlength="500" form="exercise-form">{{ notes }}</textarea>
       <input type="submit" align="right" value="Save">
     </form>
     <p>{{ error }}</p>

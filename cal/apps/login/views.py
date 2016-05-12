@@ -3,7 +3,8 @@ from django.contrib.auth import authenticate, login
 
 def landing(request):
     if request.method == 'POST':
-        user = authenticate(username=request.POST['username'], password=request.POST['password'])
+        name = request.POST['username'].lower()
+        user = authenticate(username=name, password=request.POST['password'])
         if user is not None:
             login(request, user)
         else:

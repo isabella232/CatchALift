@@ -1,9 +1,8 @@
 <!-- rendered through index.html -->
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/simple-sidebar.css' %}">
-{% include 'user/sidebar.html' %}
-<div class="container">
-  <div class="col-md-13 col-md-offset-1">
+{% include 'user/navbar.html' %}
+<div class="container spaced spaced-user ">
 {% if page == '/plans/search' %}
   {% include 'user/search.html' %}
 {% elif page == '/plans/myplans' %}
@@ -17,5 +16,4 @@
 {% else %}
   {% include 'user/main.html' %}
 {% endif %}
-  </div>
 </div>
