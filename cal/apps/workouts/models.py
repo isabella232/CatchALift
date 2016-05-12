@@ -15,7 +15,7 @@ class Exercise(models.Model):
         verbose_name_plural = "Exercises"
 
 class Workout(models.Model):
-    title = models.CharField(max_length=10, default='', unique=True) #Title of Workout
+    title = models.CharField(max_length=20, default='', unique=True) #Title of Workout
     description = models.CharField(max_length=100, default='') #General purpose of workout
     notes = models.TextField(max_length=300, default='') #Patterns of exercises, Additional references
     exercise = models.ManyToManyField(Exercise, default=DEFAULT_ID) #Exercise elements that makes this workout
