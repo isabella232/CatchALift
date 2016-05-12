@@ -1,51 +1,14 @@
 [
   {
-    "title":"Workout A",
-    "description":"This is the first workout",
-    "notes":"Include links in the notes section as well as exercise patterns",
-    "exercises":"Exercise 1,Exercise 2,Exercise 3",
-    "category":"Beginner"
+    "title":"Workout 'A'",
+    "description":"Full Body Focus: always allow 1 day between full body strength workouts so your body can properly recover",
+    "notes":"Low Intensity Steady State Cardio (LISS). 20-45 minutes where you can still breathe comfortably.",
+    "exercises":"5-10 minutes cardio warmup of choice,Squat (goblet or box style) OR Leg Press,Seated Cable or Machine Row,Bench Press OR Chest Press,Alternating Bicep Curls - Dumbbells,Back Extension Machine OR Bridge Lifts,10 minutes Low Impact Cardio"
   },
   {
-    "title":"Workout B",
-    "description":"This is the second workout",
-    "notes":"Include links in the notes section as well as exercise patterns",
-    "exercises":"Exercise 2,Exercise 4,Exercise 5",
-    "category":"Advanced"
-  },
-  {
-    "title":"Workout C",
-    "description":"This is the second workout",
-    "notes":"Include links in the notes section as well as exercise patterns",
-    "exercises":"Exercise 6,Exercise 4,Exercise 1",
-    "category":"Advanced"
-  },
-  {
-    "title":"Workout D",
-    "description":"This is the second workout",
-    "notes":"Include links in the notes section as well as exercise patterns",
-    "exercises":"Exercise 9,Exercise 10,Exercise 5",
-    "category":"Beginner"
-  },
-  {
-    "title":"Workout E",
-    "description":"This is the second workout",
-    "notes":"Include links in the notes section as well as exercise patterns",
-    "exercises":"Exercise 1,Exercise 4,Exercise 3,Exercise 9,Exercise 10",
-    "category":"Advanced"
-  },
-  {
-    "title":"Workout F",
-    "description":"This is the second workout",
-    "notes":"Include links in the notes section as well as exercise patterns",
-    "exercises":"Exercise 9,Exercise 6,Exercise 5",
-    "category":"Beginner"
-  },
-  {
-    "title":"Workout G",
-    "description":"This is the second workout",
-    "notes":"Include links in the notes section as well as exercise patterns",
-    "exercises":"Exercise 10,Exercise 9,Exercise 5",
-    "category":"Disabled"
+    "title":"Workout 'B'",
+    "description":"Full Body Focus: always allow 1 day between full body strength workouts so your body can properly recover",
+    "notes":"15-20 minutes of High Intensity Interval Training for cardio (HIIT). Example: 5 minute warm up, 30 seconds harder intensity, 30 seconds easy or no intensity for the next 10 minutes, then 5 minutes cool down.",
+    "exercises":"Shallow Lunges,Pullups/Lat Pull Downs,Overhead Press - DBs or machine,Triceps Press Down with Rope,Straight Leg Hip Lifts,Core - Elbow Side Plank OR Pallof Press,10 minutes Low Impact Cardio"
   }
 ]

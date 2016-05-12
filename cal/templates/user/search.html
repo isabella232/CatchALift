@@ -2,7 +2,8 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th><h3>Search for a Workout Plan</h3></th>
+        <th><h3>Search Workouts</h3></th>
+
         <th></th>
         <th>
           <form class="form-search pull-right" method="post" action="{% url 'plans:search' %}">
@@ -16,9 +17,14 @@
     <tbody>
       {% for workout in workouts %}
         <tr>
-          <td><a href="{% url 'plans:results' workout.id %}">{{ workout.title }}</a></td>
-          <td>{{ workout.description }}</td>
-          <td>{{ workout.notes }}</td>
+          <td class="title">
+            <a href="{% url 'plans:results' workout.0.id %}">{{ workout.0.title }}</a>
+            {% if workout.1 %}
+              <a href="{% url 'plans:unsubscribe' workout.0.id %}"><span class="label label-danger pull-right">Subscribed</span></a>
+            {% endif %}
+          </td>
+          <td>{{ workout.0.description }}</td>
+          <td>{{ workout.0.notes }}</td>
         </tr>
       {% endfor %}
     </tbody>

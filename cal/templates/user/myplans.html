@@ -8,12 +8,12 @@
           <a href="{% url 'plans:results' workout.id %}">
             <h4>{{ workout.title }}</h4>
           </a>
-          <p>{{ workout.description }}</p>
           <h4>
             <a href="{% url 'plans:unsubscribe' workout.id %}">
               <span class="label label-danger pull-right">Unsubscribe</span>
             </a>
           </h4>
+          <p>{{ workout.description }}</p>
         </li>
       {% endfor %}
     </ul>

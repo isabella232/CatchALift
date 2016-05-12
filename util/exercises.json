@@ -1,62 +1,80 @@
 [
   {
-    "name":"Exercise 1",
-    "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "name":"5-10 minutes cardio warmup of choice",
+    "sets":"0",
+    "reps":"0",
+    "notes":"Very light on ALL moves so you can focus on form this week!!"
   },
   {
-    "name":"Exercise 2",
-    "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "name":"Squat (goblet or box style) OR Leg Press",
+    "sets":"3",
+    "reps":"9",
+    "notes":"1)http://www.bodybuilding.com/exercises/detail/view/name/dumbbell-goblet-squat \n2)http://www.bodybuilding.com/exercises/detail/view/name/narrow-stance-leg-press"
   },
   {
-    "name":"Exercise 3",
-    "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "name":"Seated Cable or Machine Row",
+    "sets":"3",
+    "reps":"9",
+    "notes":"http://www.bodybuilding.com/exercises/detail/view/name/seated-cable-rows"
   },
   {
-    "name":"Exercise 4",
-    "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "name":"Bench Press OR Chest Press",
+    "sets":"3",
+    "reps":"9",
+    "notes":"1)http://www.bodybuilding.com/exercises/detail/view/name/barbell-bench-press-wide-grip \n2)http://www.bodybuilding.com/exercises/detail/view/name/machine-bench-press"
   },
   {
-    "name":"Exercise 5",
-    "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "name":"Alternating Bicep Curls - Dumbbells",
+    "sets":"3",
+    "reps":"9",
+    "notes":"http://www.bodybuilding.com/exercises/detail/view/name/dumbbell-alternate-bicep-curl"
   },
   {
-    "name":"Exercise 6",
+    "name":"Back Extension Machine OR Bridge Lifts",
     "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "reps":"13",
+    "notes":"1)http://www.bodybuilding.com/exercises/detail/view/name/seated-back-extension \n2)http://www.bodybuilding.com/exercises/detail/view/name/butt-lift-bridge (you don’t have to liftvery high. keep abs tight)"
   },
   {
-    "name":"Exercise 7",
-    "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "name":"10 minutes Low Impact Cardio",
+    "sets":"0",
+    "reps":"0",
+    "notes":"this will help flush out some of the soreness that will likely happen."
   },
   {
-    "name":"Exercise 8",
-    "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "name":"Shallow Lunges",
+    "sets":"3",
+    "reps":"9",
+    "notes":"http://www.bodybuilding.com/exercises/detail/view/name/bodyweight-reverse-lunge"
   },
   {
-    "name":"Exercise 9",
-    "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "name":"Pullups/Lat Pull Downs",
+    "sets":"3",
+    "reps":"9",
+    "notes":"1)http://www.bodybuilding.com/exercises/detail/view/name/band-assisted-pull-up \n2)http://www.bodybuilding.com/exercises/detail/view/name/wide-grip-lat-pulldown"
   },
   {
-    "name":"Exercise 10",
+    "name":"Overhead Press - DBs or machine",
+    "sets":"3",
+    "reps":"9",
+    "notes":"1)http://www.bodybuilding.com/exercises/detail/view/name/machine-shoulder-military-press \n2)http://www.bodybuilding.com/exercises/detail/view/name/seated-dumbbell-press"
+  },
+  {
+    "name":"Triceps Press Down with Rope",
+    "sets":"3",
+    "reps":"9",
+    "notes":"http://www.bodybuilding.com/exercises/detail/view/name/triceps-pushdown-rope-attachment"
+  },
+  {
+    "name":"Straight Leg Hip Lifts",
+    "sets":"3",
+    "reps":"9",
+    "notes":"ttps://www.youtube.com/watch?v=5LAALiGJW0w Squeeze abs and butt. Don’t need to lift very high."
+  },
+  {
+    "name":"Core - Elbow Side Plank OR Pallof Press",
     "sets":"2",
-    "reps":"3",
-    "notes":"Include links in the notes and description section"
+    "reps":"0",
+    "notes":"1)https://www.youtube.com/watch?v=K-DBIY19KW8 squeeze your butt muscles, too!2)http://www.bodybuilding.com/exercises/detail/view/name/pallof-press-with-rotation"
   }
 ]

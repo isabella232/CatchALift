@@ -8,10 +8,14 @@ from ...util import common, user_required
 @user_required
 def search(request):
     context = common(request)
-    context['workouts'] = Workout.objects.all()
+    subscribed = []
+    workouts = Workout.objects.all()
     if request.method == 'POST':
         query = request.POST['search']
-        context['workouts'] = Workout.objects.filter(title=query)
+        workouts = Workout.objects.filter(title=query)
+    for workout in workouts:
+        subscribed.append(request.user in workout.user.all())
+    context['workouts'] = zip(workouts, subscribed)
     return render(request, 'index.html', context)
 
 @login_required
