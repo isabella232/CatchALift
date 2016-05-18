@@ -26,7 +26,7 @@ def modify(request, user_id):
 @admin_required
 def save(request, user_id):
     user = User.objects.get(id = user_id)
-    user.username = request.POST['username']
+    user.username = request.POST['username'].lower()
     user.first_name = request.POST['fname']
     user.last_name = request.POST['lname']
     user.groups.clear()
@@ -52,7 +52,7 @@ def save_new(request):
         context['create'] = True
         context['error'] = 'This account already exists'
         return render(request, 'index.html', context)
-    user = User.objects.create(username=request.POST['username'], first_name=request.POST['fname'], last_name=request.POST['lname'])
+    user = User.objects.create(username=request.POST['username'].lower(), first_name=request.POST['fname'], last_name=request.POST['lname'])
     user.set_password(request.POST['password'])
     g = Group.objects.get(name=request.POST['type'])
     g.user_set.add(user)

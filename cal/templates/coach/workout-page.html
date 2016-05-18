@@ -16,7 +16,7 @@
     {% endif %}
       {% csrf_token %}
       <label>Title</label>
-      <input type="text" class="form-control" required name="title" value="{{ title }}" maxlength="10">
+      <input type="text" class="form-control" required name="title" value="{{ title }}" maxlength="20">
       <label>Description</label>
       <input type="text" class="form-control" name="description" value="{{ description }}" maxlength="100">
       <label>Exercises</label>
@@ -27,7 +27,7 @@
         {% endfor %}
       </select>
       <label>Notes</label>
-      <textarea class="form-control" name="notes" maxlength="500" form="workout-form">{{ notes }}</textarea>
+      <textarea class="form-control" name="notes" maxlength="300" form="workout-form">{{ notes }}</textarea>
       <input type="submit" align="right" value="Save">
     </form>
     <p>{{ error }}</p>
