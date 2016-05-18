@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from ..models import Workout
 from ...util import common, user_required
+import search_engine
 
 @login_required
 @user_required
@@ -12,7 +13,7 @@ def search(request):
     workouts = Workout.objects.all()
     if request.method == 'POST':
         query = request.POST['search']
-        workouts = Workout.objects.filter(title=query)
+        workouts = search_engine.search(query, workouts)
     for workout in workouts:
         subscribed.append(request.user in workout.user.all())
     context['workouts'] = zip(workouts, subscribed)
