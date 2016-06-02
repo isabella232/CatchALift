@@ -1,11 +1,27 @@
+{% block css %}
+  <style>
+    h3{
+      text-align: center;
+    }
+  </style>
+{% endblock %}
+
 <div class="container spaced">
   <div class="col-md-12">
-    <h3>Select a coach to chat!</h3>
+    <h2>Select a user to chat!</h3>
     <ul class="list-group spaced">
       {% for coach in coaches %}
-        <a href="{% url 'msg:uview_conv' coach.id %}" class="list-group-item">
-          <h3 class="list-group-item-heading">{{ coach.username }}</h3>
-        </a>
+        {% if forloop.counter|divisibleby:3 or forloop.counter0 == 0 %}
+          <div class="row">
+        {% endif %}
+        <div class="col-sm-4 col-md-4">
+          <a href="{% url 'msg:uview_conv' coach.id %}" class="list-group-item">
+            <h3 class="list-group-item-heading">{{ coach.username }}</h3>
+          </a>
+        </div>
+        {% if forloop.counter|divisibleby:3 or forloop.last %}
+          </div>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>

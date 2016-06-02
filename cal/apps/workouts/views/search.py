@@ -44,4 +44,5 @@ def myplans(request):
     for workout in workouts:
         if request.user in workout.user.all():
             context['my_workouts'].append(workout)
+    context['len'] = len(context['my_workouts'])
     return render(request, 'index.html', context)

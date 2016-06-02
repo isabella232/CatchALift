@@ -11,13 +11,21 @@
   <button type="button" class="btn btn-success click-element" onclick="location.href='{% url 'plans:ecreate' %}';">Create a New Exercise</button>
   <ul class="list-group spaced">
     {% for exercise in exercises %}
-      <a href="{% url 'plans:emodify' exercise.id %}" class="list-group-item spaced">
-        <h4 class="list-group-item-heading">{{ exercise.name }}</h4>
-        <p class="list-group-item-text">Sets: {% if exercise.sets %}{{exercise.sets}}{% else %}None{% endif %}</p>
-        <p class="list-group-item-text">Reps: {{ exercise.reps }}</p>
-        <p class="list-group-item-text">Notes: {{ exercise.notes }}</p>
-      </a>
-      <a href="{% url 'plans:eremove' exercise.id %}"><h4 class="tag-remove"><span class="label label-danger">Remove {{ exercise.name }}</span></h4></a>
+      {% if forloop.counter|divisibleby:2 or forloop.counter0 == 0 %}
+        <div class="row">
+      {% endif %}
+      <div class="col-sm-6 col-md-6">
+        <a href="{% url 'plans:emodify' exercise.id %}" class="list-group-item spaced">
+          <h4 class="list-group-item-heading">{{ exercise.name }}</h4>
+          <p class="list-group-item-text">Sets: {% if exercise.sets %}{{ exercise.sets }}{% else %}None{% endif %}</p>
+          <p class="list-group-item-text">Reps: {{ exercise.reps }}</p>
+          <p class="list-group-item-text">Notes: {{ exercise.notes }}</p>
+        </a>
+        <a href="{% url 'plans:eremove' exercise.id %}" onClick="return confirm('Are you sure you want to remove the exercise?')"><h4 class="tag-remove"><span class="label label-danger">Remove Exercise</span></h4></a>
+      </div>
+      {% if forloop.counter0|divisibleby:2 or forloop.last %}
+        </div>
+      {% endif %}
     {% endfor %}
   </ul>
 </div>

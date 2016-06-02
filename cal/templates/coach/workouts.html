@@ -52,7 +52,7 @@
         ;" onclick="location.href='{% url 'plans:wmodify' workout.id %}';">
         <img src="{% static 'img/workout_ico.png' %}" width="100px" height= "100px">
         <h4>{{ workout.title }}</h4>
-        <a href="{% url 'plans:wremove' workout.id %}"><h4><span class="label label-danger tag-remove">Remove</span></h4></a>
+        <a href="{% url 'plans:wremove' workout.id %}" onClick="return confirm('Are you sure you want to remove the workout?')"><h4><span class="label label-danger tag-remove">Remove</span></h4></a>
       </div>
     {% endfor %}
   </div>

@@ -1,14 +1,26 @@
 [
   {
-    "title":"Workout 'A'",
+    "title":"Full Body Focus 1",
     "description":"Full Body Focus: always allow 1 day between full body strength workouts so your body can properly recover",
     "notes":"Low Intensity Steady State Cardio (LISS). 20-45 minutes where you can still breathe comfortably.",
     "exercises":"5-10 minutes cardio warmup of choice,Squat (goblet or box style) OR Leg Press,Seated Cable or Machine Row,Bench Press OR Chest Press,Alternating Bicep Curls - Dumbbells,Back Extension Machine OR Bridge Lifts,10 minutes Low Impact Cardio"
   },
   {
-    "title":"Workout 'B'",
+    "title":"Full Body Focus 2",
     "description":"Full Body Focus: always allow 1 day between full body strength workouts so your body can properly recover",
     "notes":"15-20 minutes of High Intensity Interval Training for cardio (HIIT). Example: 5 minute warm up, 30 seconds harder intensity, 30 seconds easy or no intensity for the next 10 minutes, then 5 minutes cool down.",
     "exercises":"Shallow Lunges,Pullups/Lat Pull Downs,Overhead Press - DBs or machine,Triceps Press Down with Rope,Straight Leg Hip Lifts,Core - Elbow Side Plank OR Pallof Press,10 minutes Low Impact Cardio"
+  },
+  {
+    "title":"Bigger Muscle Group",
+    "description":"Bigger Muscle Group Focus",
+    "notes":"always allow 1 day between full body strength workouts so your body can properly recover. Your LISS & HIIT times should increase this week if possible.",
+    "exercises":"5-10 minutes cardio warmup of choice,Squat (goblet or box style) OR Leg Press,Pullups/Lat Pull Downs,Chest Press/Bench Press,Rows - dumbbell/cable column,Core - Elbow Side Plank OR Pallof Press,Prone \"Superman\",10-20 minutes low impact cardio"
+  },
+  {
+    "title":"Smaller Muscle Group",
+    "description":"Smaller Muscle Group Focus",
+    "notes":"always allow 1 day between full body strength workouts so your body can properly recover. Your LISS & HIIT times should increase this week if possible.",
+    "exercises":"5-10 minutes cardio warmup of choice,Overhead Press - DBs or machine,Bicep Curls - Dumbbell,Triceps Press Down with Rope,Shoulder Raises - Lateral,Calf Raises - on leg press machine,Core - Elbow Side Plank OR Pallof Press,Prone - opposite arm/leg raises,10-20 minutes low impact cardio"
   }
 ]

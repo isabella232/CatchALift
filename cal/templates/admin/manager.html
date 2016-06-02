@@ -18,7 +18,7 @@
               <td>{{ coach.get_username }}</td>
               <td>{{ coach.first_name }}</td>
               <td>{{ coach.last_name }}</td>
-              <td><a href="{% url 'home:remove' coach.id %}">Remove</a>/<a href="{% url 'home:modify' coach.id %}">Modify</a></td>
+              <td><a href="{% url 'home:remove' coach.id %}" onClick="return confirm('Are you sure you want to remove {{ coach.get_username }}?')">Remove</a>/<a href="{% url 'home:modify' coach.id %}">Modify</a></td>
             </tr>
           {% endfor %}
         </tbody>
@@ -44,7 +44,7 @@
               <td>{{ user.get_username }}</td>
               <td>{{ user.first_name }}</td>
               <td>{{ user.last_name }}</td>
-              <td><a href="{% url 'home:remove' user.id %}">Remove</a>/<a href="{% url 'home:modify' user.id %}">Modify</a></td>
+              <td><a href="{% url 'home:remove' user.id %}" onClick="return confirm('Are you sure you want to remove {{ user.get_username }}?')">Remove</a>/<a href="{% url 'home:modify' user.id %}">Modify</a></td>
             </tr>
           {% endfor %}
         </tbody>

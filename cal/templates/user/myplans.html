@@ -3,6 +3,9 @@
   <div class="container">
     <ul class="list-group spaced">
       <h4>Your subscribed workouts:</h4>
+      {% if len == 0 %}
+        You are not subscribed to a workout.
+      {% endif %}
       {% for workout in my_workouts %}
         <li class="list-group-item">
           <a href="{% url 'plans:results' workout.id %}">

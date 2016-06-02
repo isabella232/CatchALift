@@ -19,11 +19,11 @@
     <input type="submit" class="pull-right" value="Send">
     <textarea class="form-control" name="message" maxlength="500" form="exercise-form"></textarea>
   </form>
-  <ul class="list-group spaced">
+  <ul class="list-group spaced" id="a">
   {% for message in messages %}
   <div class="list-group-item">
     {% if message.msg_from == coach %}
-      <h2 class="list-group-item-heading text-right name">{{ message.msg_from }}</h2>
+      <h2 class="list-group-item-heading text-right name">me</h2>
       <h4 class="list-group-item-text text-right">{{ message.content }}</h4>
       <p class="list-group-item-text text-right">{{ message.date_time }}</p>
     {% else %}
@@ -35,3 +35,17 @@
   {% endfor %}
   </ul>
 </div>
+
+{% block js %}
+  <script>
+    function load()
+    {
+      $('#messages').load(document.URL + ' #messages')
+    }
+
+    setInterval(function()
+    {
+        load()
+    }, 5000);
+  </script>
+{% endblock %}

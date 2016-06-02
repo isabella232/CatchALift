@@ -75,6 +75,54 @@
     "name":"Core - Elbow Side Plank OR Pallof Press",
     "sets":"2",
     "reps":"0",
-    "notes":"1)https://www.youtube.com/watch?v=K-DBIY19KW8 squeeze your butt muscles, too!2)http://www.bodybuilding.com/exercises/detail/view/name/pallof-press-with-rotation"
+    "notes":"1)https://www.youtube.com/watch?v=K-DBIY19KW8 squeeze your butt muscles, too! 2)http://www.bodybuilding.com/exercises/detail/view/name/pallof-press-with-rotation"
+  },
+  {
+    "name":"Chest Press/Bench Press",
+    "sets":"3",
+    "reps":"6",
+    "notes":"1)http://www.bodybuilding.com/exercises/detail/view/name/barbell-bench-press-wide-grip    2)http://www.bodybuilding.com/exercises/detail/view/name/machine-bench-press"
+  },
+  {
+    "name":"Rows - dumbbell/cable column",
+    "sets":"3",
+    "reps":"6",
+    "notes":"1)http://www.bodybuilding.com/exercises/detail/view/name/seated-cable-rows 2)http://www.bodybuilding.com/exercises/detail/view/name/dumbbell-incline-row"
+  },
+  {
+    "name":"Prone \"Superman\"",
+    "sets":"2",
+    "reps":"0",
+    "notes":"http://www.bodybuilding.com/exercises/detail/view/name/superman You don’t have to lift very high. Keep your stomach tight, too!"
+  },
+  {
+    "name":"10-20 minutes low impact cardio",
+    "sets":"0",
+    "reps":"0",
+    "notes":"If time permits"
+  },
+  {
+    "name":"Bicep Curls - Dumbbell",
+    "sets":"6",
+    "reps":"3",
+    "notes":"http://www.bodybuilding.com/exercises/detail/view/name/dumbbell-bicep-curl"
+  },
+  {
+    "name":"Shoulder Raises - Lateral",
+    "sets":"6",
+    "reps":"3",
+    "notes":"http://www.bodybuilding.com/exercises/detail/view/name/alternating-deltoid-raise Don’t go above shoulder height and keep core engaged. Can be done seated, too."
+  },
+  {
+    "name":"Calf Raises - on leg press machine",
+    "sets":"6",
+    "reps":"3",
+    "notes":"http://www.bodybuilding.com/exercises/detail/view/name/calf-press-on-the-leg-press-machine Go light at first one these."
+  },
+  {
+    "name":"Prone - opposite arm/leg raises",
+    "sets":"6",
+    "reps":"3",
+    "notes":"https://www.youtube.com/watch?v=YrrnXPh3gb8 10 each side. Very small movement. Do these super slow! "
   }
 ]
